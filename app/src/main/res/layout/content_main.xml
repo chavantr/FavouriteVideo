@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent">
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <TextView
+                android:id="@+id/lblTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="16dp"
+                android:text="For queries or requests that"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/lblTitle">
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txtName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Name"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilCompany"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tilName">
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txtCompany"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Company"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilPhoneNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tilCompany">
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txtPhoneNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Phone number"
+                    android:inputType="number"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tilPhoneNumber">
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txtEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Email"
+                    android:inputType="textEmailAddress"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilHelp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tilEmail">
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txtHelp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="How can we help?"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <CheckBox
+                android:id="@+id/chkTerms"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:text="Please keep me informed about service."
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tilHelp"/>
+
+
+        <Button android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/btnSubmit"
+                app:layout_constraintTop_toBottomOf="@id/chkTerms" android:layout_marginTop="32dp" android:text="Submit"
+                android:textAllCaps="false"
+                app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="32dp"
+                app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="32dp"/>
+
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/lblPhone"
+                  app:layout_constraintTop_toBottomOf="@id/btnSubmit" android:autoLink="phone"
+                  android:text="020-28994994"
+                  android:layout_marginTop="16dp" app:layout_constraintStart_toStartOf="parent"
+                  android:layout_marginStart="16dp" app:layout_constraintEnd_toEndOf="parent"
+                  android:layout_marginEnd="16dp"/>
+
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/lblEmail"
+                  app:layout_constraintTop_toBottomOf="@id/lblPhone" android:autoLink="email"
+                  android:text="contactus@afourtech.com" android:textColorLink="@android:color/darker_gray"
+                  android:layout_marginTop="16dp" app:layout_constraintStart_toStartOf="parent"
+                  android:layout_marginStart="16dp" app:layout_constraintEnd_toEndOf="parent"
+                  android:layout_marginEnd="16dp"/>
+
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/lblGetTouch"
+                  app:layout_constraintTop_toBottomOf="@id/lblEmail" android:text="Get Social" android:textStyle="bold"
+                  android:layout_marginTop="24dp" app:layout_constraintStart_toStartOf="parent"
+                  android:textColor="@android:color/black"
+                  android:layout_marginStart="16dp" app:layout_constraintEnd_toEndOf="parent"
+                  android:layout_marginEnd="16dp"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
